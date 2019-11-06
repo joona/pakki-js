@@ -78,7 +78,7 @@ export async function sha256(message) {
 function _getRefs(ctx, el, refs) {
   for (var i = 0, len = refs.length; i < len; i++) {
     var ref = refs[i];
-    var element = el.querySelector(`.__${ref}`);
+    var element = qel(`.__${ref}`, el);
     if(element) {
       ctx[ref] = element;
     } else {
@@ -91,8 +91,19 @@ export function refs(ctx, refs, parent) {
   _getRefs(ctx, parent || ctx.el, refs);
 }
 
+export function qel(query, parent) {
+  if(!parent) parent = document;
+  return parent.querySelector(query);
+}
+
+export function qall(query, parent) {
+  if(!parent) parent = document;
+  return parent.querySelectorAll(query); 
+}
+
 export function createNode(id) {
   const tpl = document.getElementById(id);
   const node = document.importNode(tpl.content, true);
   return node;
 }
+
