@@ -1,6 +1,6 @@
 {
   "name": "@joona/pakki-js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "RE:DOM Component collection",
   "main": "index.js",
   "scripts": {
