@@ -16,6 +16,12 @@ export function listen(el, eventName, callback) {
   return callback; 
 }
 
+export function unlisten(el, eventName, func) {
+  el || (el = document);
+  el = el.el || el;
+  el.removeEventListener(eventName, func);
+}
+
 export function dispatchAction(actionName, payload, el) {
   el || (el = document);
   const action = {
