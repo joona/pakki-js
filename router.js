@@ -11,7 +11,6 @@ export const router = {
     return this;
   },
 
-
   getFragment() {
     var fragment = '';
 
