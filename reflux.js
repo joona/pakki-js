@@ -103,7 +103,7 @@ class HandlerRegistry {
     const actions = Object.keys(handlerMap);
     for (var i = 0, len = actions.length; i < len; i++) {
       if(this._handlers[actions[i]]) {
-        console.warn('DUPLICATE HANDLER:', actions[i]);
+        console.warn('[Reflux] duplicate handler', actions[i]);
       }
       this._handlers[actions[i]] = handlerMap[actions[i]];
     }

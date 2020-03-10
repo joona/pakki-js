@@ -1,7 +1,7 @@
 {
   "name": "@joona/pakki-js",
   "version": "1.0.2",
-  "description": "RE:DOM Component collection",
+  "description": "Collection of reusable JS utils",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
