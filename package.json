@@ -1,6 +1,6 @@
 {
   "name": "@joona/pakki-js",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Collection of reusable JS utils",
   "main": "index.js",
   "scripts": {
