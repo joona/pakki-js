@@ -1,13 +1,14 @@
 const componentFactory = {
   _factories: {},
+  selector: '.component',
 
   register(componentName, factory) {
     componentFactory._factories[componentName] = factory;
     return this;
   },
 
-  attachComponents() {
-    const components = document.body.querySelectorAll('.component');
+  attachComponents(selector) {
+    const components = document.body.querySelectorAll(selector || componentFactory.selector);
 
     for (var i = 0, len = components.length; i < len; i++) {
       const element = components[i];
